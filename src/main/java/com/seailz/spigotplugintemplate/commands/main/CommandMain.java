@@ -20,7 +20,7 @@ public class CommandMain extends Command {
 
     public CommandMain() {
         this.addSubCommands(new CommandReport());
-        setName(SpigotPluginTemplate.instance.getPluginName());
+        setName(SpigotPluginTemplate.instance.getPluginName().replaceAll(" ", ""));
         if (SpigotPluginTemplate.getInstance().getURL() == null) url = SpigotPluginTemplate.getInstance().getURL();
     }
 
