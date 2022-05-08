@@ -1,8 +1,9 @@
-package com.seailz.spigotplugintemplate.commands;
+package com.seailz.spigotplugintemplate.commands.main.sub;
 
 import com.seailz.spigotplugintemplate.SpigotPluginTemplate;
 import com.seailz.spigotplugintemplate.core.Logger;
 import games.negative.framework.command.Command;
+import games.negative.framework.command.SubCommand;
 import games.negative.framework.command.annotation.CommandInfo;
 import games.negative.framework.message.Message;
 import games.negative.framework.util.HasteBin;
@@ -16,10 +17,14 @@ import java.util.Objects;
 
 @CommandInfo(
         name = "report",
-        permission = "eco.report"
+        permission = "main.report"
 )
-public class CommandReport extends Command {
+public class CommandReport extends SubCommand {
     private final SpigotPluginTemplate plugin = SpigotPluginTemplate.getInstance();
+
+    public CommandReport() {
+        this.setPermission(plugin.getPluginName() + ".report");
+    }
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
