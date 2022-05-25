@@ -1,6 +1,6 @@
-package com.seailz.spigotplugintemplate.core;
+package com.seailz.template.core;
 
-import com.seailz.spigotplugintemplate.SpigotPluginTemplate;
+import com.seailz.template.TemplatePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
@@ -30,7 +30,7 @@ public class Logger {
                 break;
             case DEBUG:
                 Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&e[SPIGOTPLUGIN] &8[&c&lDEBUG&r&8] &c" + message));
-                if (SpigotPluginTemplate.getInstance().isDebug())  SpigotPluginTemplate.getInstance().getDebugLog().add(message);
+                if (TemplatePlugin.getInstance().isDebug())  TemplatePlugin.getInstance().getDebugLog().add(message);
                 break;
             case OUTLINE:
                 Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&e[SPIGOTPLUGIN] &7" + message));

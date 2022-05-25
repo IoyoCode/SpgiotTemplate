@@ -1,8 +1,8 @@
-package com.seailz.spigotplugintemplate;
+package com.seailz.template;
 
-import com.seailz.spigotplugintemplate.commands.main.CommandMain;
-import com.seailz.spigotplugintemplate.core.Locale;
-import com.seailz.spigotplugintemplate.core.Logger;
+import com.seailz.template.commands.main.CommandMain;
+import com.seailz.template.core.Locale;
+import com.seailz.template.core.Logger;
 import games.negative.framework.BasePlugin;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,11 +10,11 @@ import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
 
-public final class SpigotPluginTemplate extends BasePlugin {
+public final class TemplatePlugin extends BasePlugin {
 
     @Getter
     @Setter
-    public static SpigotPluginTemplate instance;
+    public static TemplatePlugin instance;
     @Getter
     boolean debug;
     @Getter
@@ -55,9 +55,9 @@ public final class SpigotPluginTemplate extends BasePlugin {
         saveDefaultConfig();
 
         // Set details and register things
+        setDetails("Plugin", "Seailz", "me.seailz.com", ChatColor.RED);
         register(RegisterType.COMMAND);
         register(RegisterType.LISTENER);
-        setDetails("Plugin", "Seailz", "me.seailz.com", ChatColor.RED);
 
         long finish = System.currentTimeMillis() - start;
         Logger.log(Logger.LogLevel.SUCCESS, "Started in " + String.valueOf(finish) + "ms!");

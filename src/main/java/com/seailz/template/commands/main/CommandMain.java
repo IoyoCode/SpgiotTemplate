@@ -1,7 +1,7 @@
-package com.seailz.spigotplugintemplate.commands.main;
+package com.seailz.template.commands.main;
 
-import com.seailz.spigotplugintemplate.SpigotPluginTemplate;
-import com.seailz.spigotplugintemplate.commands.main.sub.CommandReport;
+import com.seailz.template.TemplatePlugin;
+import com.seailz.template.commands.main.sub.CommandReport;
 import games.negative.framework.command.Command;
 import games.negative.framework.command.annotation.CommandInfo;
 import games.negative.framework.message.Message;
@@ -13,15 +13,15 @@ import org.bukkit.command.CommandSender;
 )
 public class CommandMain extends Command {
 
-    String color = "&" + SpigotPluginTemplate.getInstance().getColor().getChar();
-    String name = SpigotPluginTemplate.getInstance().getPluginName();
-    String author = SpigotPluginTemplate.getInstance().getDeveloper();
+    String color = "&" + TemplatePlugin.getInstance().getColor().getChar();
+    String name = TemplatePlugin.getInstance().getPluginName();
+    String author = TemplatePlugin.getInstance().getDeveloper();
     String url;
 
     public CommandMain() {
         this.addSubCommands(new CommandReport());
-        setName(SpigotPluginTemplate.instance.getPluginName().replaceAll(" ", ""));
-        if (SpigotPluginTemplate.getInstance().getURL() == null) url = SpigotPluginTemplate.getInstance().getURL();
+        setName(TemplatePlugin.instance.getPluginName().replaceAll(" ", ""));
+        if (TemplatePlugin.getInstance().getURL() == null) url = TemplatePlugin.getInstance().getURL();
     }
 
     @Override

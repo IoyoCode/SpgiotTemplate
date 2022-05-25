@@ -1,8 +1,7 @@
-package com.seailz.spigotplugintemplate.commands.main.sub;
+package com.seailz.template.commands.main.sub;
 
-import com.seailz.spigotplugintemplate.SpigotPluginTemplate;
-import com.seailz.spigotplugintemplate.core.Logger;
-import games.negative.framework.command.Command;
+import com.seailz.template.TemplatePlugin;
+import com.seailz.template.core.Logger;
 import games.negative.framework.command.SubCommand;
 import games.negative.framework.command.annotation.CommandInfo;
 import games.negative.framework.message.Message;
@@ -20,7 +19,7 @@ import java.util.Objects;
         permission = "main.report"
 )
 public class CommandReport extends SubCommand {
-    private final SpigotPluginTemplate plugin = SpigotPluginTemplate.getInstance();
+    private final TemplatePlugin plugin = TemplatePlugin.getInstance();
 
     public CommandReport() {
         this.setPermission(plugin.getPluginName() + ".report");
