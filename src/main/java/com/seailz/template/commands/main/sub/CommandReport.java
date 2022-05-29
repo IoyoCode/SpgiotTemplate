@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
+
+/**
+ * @author NegativeGames -- NegativeDev & joeecodes
+ */
 @CommandInfo(
         name = "report",
         permission = "main.report"
